@@ -1,0 +1,62 @@
+let registros = [];
+
+function agregarRegistro(){
+   
+    var usuario = document.getElementById("in_nombre_usuario").value 
+    var contrasena = document.getElementById("in_contrasena").value;
+    var confirmar_contrasena = document.getElementById("in_confirmar_contrasena").value;
+    
+    function arreglo(usuario, contrasena, confirmar_contrasena) {
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+        this.confirmar_contrasena = confirmar_contrasena;
+
+    } 
+    /* 
+    if(usuario !== "" && contrasena !== "" && confirmar_contrasena !== "" ){
+        arreglo();
+       
+    }
+    */
+    // else if(usuario){
+    //     arreglo();
+    // }
+     
+     
+    registros.push({usuario, contrasena, confirmar_contrasena}); 
+   
+    //OrdenarArreglo();
+    //console.log(registros);
+  
+
+}
+
+
+function OrdenarArreglo(arreglo){
+    /*
+    var respuesta = arreglo.sort(function (a,b){
+        if (arreglo.usuario > b.usuario){
+             return 1;
+        }
+        if (a.usuario < b.usuario){
+            return -1;
+        }
+         return 0;
+        
+     });
+
+      return respuesta;
+*/
+    
+}
+
+
+
+
+
+
+
+
+module.exports.registros = registros;
+module.exports.OrdenarArreglo = OrdenarArreglo;
+module.exports.agregarRegistro = agregarRegistro;
